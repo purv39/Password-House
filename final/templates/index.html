@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+ {% block title %}
+    Home
+{% endblock %}
+
+{% block link %}
+
+    <link href="/static/icons.css" rel="stylesheet">
+
+{% endblock %}
+
+{% block main %}
+         <div class="centerdiv">
+
+
+{% for field in fields %}
+<form action="/" method = "POST">
+  <input type="hidden" name="field" value="{{field.field }}">
+       <button type="submit" class="button fa">
+   <span class="fa fa-3x fa-{{ field.field }}"></span>
+</button>
+
+</form>
+
+{% endfor %}
+<div class="tooltip">
+           <a href="/add">
+              <button class="button fa">
+   <span class="fa fa-3x fa-plus"></span>
+</button>
+           </a>
+           <span class="tooltiptext">Add a field</span>
+    </div>
+    </div>
+{% endblock %}

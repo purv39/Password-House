@@ -1,0 +1,115 @@
+.centerdiv
+{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+button
+{
+  height: 120px;
+  width: 120px;
+  background-color: #f5f6fa;
+  margin: 10px;
+  /*text-align: center;*/
+  border-radius: 60px;
+/* box-shadow: 1px 4px 2px 2px #dcdde1;*/
+  line-height: 110px;
+  position: relative;
+  overflow: hidden ;
+  top: 60% !important;
+
+}
+
+button
+{
+  transition: all 0.3s linear;
+}
+
+button:hover .fa
+{
+  transform: scale(1.4);
+  color: #f5f6fa;
+}
+
+button:before
+{
+  content: "";
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  top: 90%;
+  left: -50%;
+  background-color: #00a8ff;
+  transform: rotate(60deg);
+}
+
+button:hover:before
+{
+ animation: socialicons 0.8s 1;
+ animation-fill-mode: forwards;
+}
+
+
+@keyframes socialicons
+{
+  0% { top: 90%; left: -50%; }
+  50% { top: -60%; left: -10%; }
+  100% { top: -10%; left: -10%; }
+
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.neon a
+        {
+            position: relative;
+            display: inline-block;
+            padding: 15px 15px;
+            color: #39ff14 ;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-decoration: none;
+            font-size: 24px;
+            overflow: hidden;
+            transition: 0.8s;
+            border-radius: 50px;
+            border-style: solid;
+        }
+
+.neon a:hover
+        {
+            color: #255784;
+            background:  #39ff14 ;
+            box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+
+
+        }
